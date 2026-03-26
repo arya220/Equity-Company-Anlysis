@@ -7,7 +7,7 @@ Write-Host "Auto-push enabled. Press Ctrl+C to stop." -ForegroundColor Cyan
 
 $watcher = New-Object System.IO.FileSystemWatcher
 $watcher.Path = $watchFolder
-$watcher.IncludeSubdirectories = $false
+$watcher.IncludeSubdirectories = $true
 $watcher.EnableRaisingEvents = $true
 $watcher.NotifyFilter = [System.IO.NotifyFilters]::FileName -bor [System.IO.NotifyFilters]::LastWrite
 
